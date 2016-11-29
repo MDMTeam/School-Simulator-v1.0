@@ -23,7 +23,7 @@ public class Game extends Canvas implements Runnable {
     private static int height = 168;
     private static int scale = 3;
     public static double version = 1.1;
-    public static String title = "Alej Simulator";
+    public static String title = "Alej Sim";
 
     private Thread thread;
     private JFrame frame;

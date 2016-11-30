@@ -37,20 +37,20 @@ public class Mouse implements MouseListener, MouseMotionListener {
         
         if (Game.state == Game.STATE.MENU) {
         
-        	if (mx >= Game.getWindowWidth() / 3 + 120 && mx <= Game.getWindowWidth() / 3 + 220) {
+        	if (mx >= Game.getWindowWidth() / 4 + 220 && mx <= Game.getWindowWidth() / 4 + 320) {
         		if (my >= 150 && my <= 200) {
         			Game.state = Game.STATE.GAME;
         		}
         	}
         
 
-        	if (mx >= Game.getWindowWidth() / 3 + 120 && mx <= Game.getWindowWidth() / 3 + 220) {
+        	if (mx >= Game.getWindowWidth() / 4 + 220 && mx <= Game.getWindowWidth() / 4 + 320) {
         		if (my >= 250 && my <= 300) {
         			Game.state = Game.STATE.HELP;
         		}
         	}
 
-        	if (mx >= Game.getWindowWidth() / 3 + 120 && mx <= Game.getWindowWidth() / 3 + 220) {
+        	if (mx >= Game.getWindowWidth() / 4 + 220 && mx <= Game.getWindowWidth() / 4 + 320) {
         		if (my >= 350 && my <= 400) {
         			System.exit(1);
         		}

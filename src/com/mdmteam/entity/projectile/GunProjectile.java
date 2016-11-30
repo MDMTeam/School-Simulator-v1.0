@@ -5,7 +5,7 @@ import com.mdmteam.screen.Screen;
 
 public class GunProjectile extends Projectile{
 	
-	public static final int FIRE_RATE = 5;
+	public static final int FIRE_RATE = 10;
 
 	public GunProjectile(int x, int y, double dir) {
 		super(x, y, dir);

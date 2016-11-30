@@ -20,11 +20,11 @@ public class Menu {
 			Rectangle help = new Rectangle(Game.getWindowWidth() / 3 + 120, 250, 100, 50);
 			Rectangle quit = new Rectangle(Game.getWindowWidth() / 3 + 120, 350, 100, 50);
 			
-			Font fnt = new Font("arial", Font.BOLD, 50);
+			Font fnt = new Font("arial", Font.BOLD, 100);
 			g.setFont(fnt);
 			g.setColor(Color.WHITE);
 		
-			g.drawString("Alej Simulator", Game.getWindowWidth() / 3, 100);
+			g.drawString("School Simulator", Game.getWindowWidth() / 6, 100);
 		
 			Font fnt1 = new Font("arial", Font.BOLD, 30);
 			g.setFont(fnt1);

@@ -13,7 +13,9 @@ public class SpriteSheet {
     public static SpriteSheet tiles = new SpriteSheet("/textures/sheets/spritesheet.png", 256);
     public static SpriteSheet spawn = new SpriteSheet("/textures/sheets/spawn.png", 48);
     public static SpriteSheet projectiles = new SpriteSheet("/textures/sheets/projectiles.png", 48);
-    public static SpriteSheet ppatro = new SpriteSheet("/textures/sheets/0.png", 64); 
+    public static SpriteSheet ppatro = new SpriteSheet("/textures/sheets/0.png", 64);
+
+    public static SpriteSheet floors = new SpriteSheet("/textures/sheets/floors_ss.png", 128);
 
     public SpriteSheet(String path, int size) {
         this.path = path;

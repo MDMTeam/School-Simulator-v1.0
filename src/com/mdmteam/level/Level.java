@@ -92,6 +92,8 @@ public class Level {
         if (tiles[x + y * width] == Tile.color_spawn_wall2) return Tile.spawn_wall2;
         if (tiles[x + y * width] == Tile.color_spawn_water) return Tile.spawn_water;
         if (tiles[x + y * width] == Tile.color_spawn_grass) return Tile.spawn_grass;
+        if (tiles[x + y * width] == Tile.color_floors_white_tile) return Tile.white_floor;
+        if (tiles[x + y * width] == Tile.color_floors_white_bench) return Tile.white_floor_bench;
         return Tile.voidTile;
     }
 

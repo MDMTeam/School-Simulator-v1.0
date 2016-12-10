@@ -35,6 +35,7 @@ public abstract class Mob extends Entity{
     }
     
     protected void shoot(int x, int y, double direction) {
+        //VV Complete madness VV
     	//direction *= 180 / Math.PI;
     	Projectile p = new GunProjectile(x, y, direction);
     	level.addProjectile(p);

@@ -45,12 +45,11 @@ public class Sprite {
     
     public static Sprite gun_projectile = new Sprite(16, 0, 0, SpriteSheet.projectiles);
 
-    //prvni patro
-    
-    public static Sprite white_floor = new Sprite(16, 0, 0, SpriteSheet.ppatro);
-    public static Sprite bench = new Sprite(16, 1, 0, SpriteSheet.ppatro);
-    public static Sprite wall = new Sprite(16, 2, 0, SpriteSheet.ppatro);
-    
+    //First floor
+
+    public static Sprite white_floor = new Sprite(16, 0, 0, SpriteSheet.floors);
+    public static Sprite white_bench_floor = new Sprite(16, 1, 0, SpriteSheet.floors);
+
     public Sprite(int size, int x, int y, SpriteSheet sheet) {
         SIZE = size;
         pixels = new int[SIZE * SIZE];

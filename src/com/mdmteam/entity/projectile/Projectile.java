@@ -25,7 +25,7 @@ public abstract class Projectile extends Entity {
 		this.y = y;
 	}
 	
-	public Sprite getSprite() {
+	public Sprite getSprite(Sprite sprite) {
 		return sprite;
 	}
 	

@@ -1,6 +1,7 @@
 package com.mdmteam.main;
 //20, 54
 import com.mdmteam.entity.mob.Player;
+import com.mdmteam.graphics.Sprite;
 import com.mdmteam.input.Keyboard;
 import com.mdmteam.input.Mouse;
 import com.mdmteam.level.Level;
@@ -16,6 +17,7 @@ import java.awt.*;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
+import java.util.Random;
 
 public class Game extends Canvas implements Runnable {
 
@@ -24,6 +26,7 @@ public class Game extends Canvas implements Runnable {
     private static int scale = 4;
     public static double version = 1.1;
     public static String title = "Alej Simulator";
+    public static int projectile_type = 1;
 
     private Thread thread;
     private JFrame frame;
@@ -72,7 +75,7 @@ public class Game extends Canvas implements Runnable {
         addMouseMotionListener(mouse);
         frame.setFocusable(true);
     }
-    
+
     public static int getWindowWidth() {
     	return width * scale;
     }
@@ -160,7 +163,7 @@ public class Game extends Canvas implements Runnable {
         	int yScroll = player.y - screen.height / 2;
         	level.render(xScroll, yScroll, screen);
         	player.render(screen);
-        	
+
         	for (int i = 0; i < pixels.length; i++) {
             	pixels[i] = screen.pixels[i];
         	}

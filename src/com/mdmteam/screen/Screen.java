@@ -3,6 +3,7 @@ package com.mdmteam.screen;
 import com.mdmteam.entity.projectile.Projectile;
 import com.mdmteam.graphics.Sprite;
 import com.mdmteam.level.tile.Tile;
+import com.mdmteam.main.Game;
 
 import java.util.Random;
 
@@ -37,6 +38,21 @@ public class Screen {
         }
     }
 
+    public void renderSprite(int xp,int yp, Sprite sprite, boolean fixed) {
+        if (fixed) {
+            xp -= xOffset;
+            yp -= yOffset;
+        }
+        for (int y = 0; y < sprite.getHeight(); y++) {
+            int ya = y + yp;
+            for (int x = 0; x < sprite.getWidth(); x++) {
+                int xa = x + xp;
+                if (xa < 0 || xa >= width || ya < 0 || ya >= height) continue;
+                pixels[xa + ya * width] = sprite.pixels[x + y * sprite.getWidth()];
+            }
+        }
+    }
+
     public void renderTile(int xp, int yp, Tile tile) {
         xp -= xOffset;
         yp -= yOffset;
@@ -50,7 +66,7 @@ public class Screen {
             }
         }
     }
-    
+
     public void renderTile(int xp, int yp, Sprite sprite) {
         xp -= xOffset;
         yp -= yOffset;
@@ -64,7 +80,7 @@ public class Screen {
             }
         }
     }
-    
+
     public void renderProjectile(int xp, int yp, Projectile p) {
         xp -= xOffset;
         yp -= yOffset;
@@ -74,8 +90,14 @@ public class Screen {
                 int xa = x + xp;
                 if (xa < -p.getSpriteSize() || xa >= width || ya < 0 || ya >= height) break;
                 if (xa < 0) xa = 0;
-                int col = p.getSprite().pixels[x + y * p.getSprite().SIZE];
-                if (col != 0xFFFF00FF) pixels[xa + ya * width] = col;
+                if (Game.projectile_type == 1) {
+                    int col = p.getSprite(Sprite.gun_projectile).pixels[x + y * p.getSprite(Sprite.gun_projectile).SIZE];
+                    if (col != 0xFFFF00FF) pixels[xa + ya * width] = col;
+                } else if (Game.projectile_type == 2) {
+                    int col = p.getSprite(Sprite.shuriken_projectile).pixels[x + y * p.getSprite(Sprite.shuriken_projectile).SIZE];
+                    if (col != 0xFFFF00FF) pixels[xa + ya * width] = col;
+                }
+
             }
         }
     }
